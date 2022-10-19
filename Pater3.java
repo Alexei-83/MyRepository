@@ -8,8 +8,7 @@ public class Pater3 {
         Scanner sc = new Scanner(System.in);
         String numberTelefon = sc.nextLine();
 
-        Pattern pattern = Pattern.compile("^(([+]?\\d{2}[- .]?))(\\d{3}[- .]?)(\\d{2}[- .]?){2}\\d{3}$"
-                + "|^(([+]?\\d{3}[- .]?))(\\d{2}[- .]?)(\\d{2}[- .]?){2}\\d{3}$");
+        Pattern pattern = Pattern.compile("^\\+\\d{3}\\d{9}");
         Matcher m = pattern.matcher(numberTelefon);
         System.out.println(m.find());
     }
